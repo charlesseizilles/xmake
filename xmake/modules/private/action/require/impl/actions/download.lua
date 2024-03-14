@@ -291,6 +291,7 @@ function main(package)
     local oldir = os.cd(workdir)
 
     -- lock this package
+    print("lock", package:name(), package:displayname(), workdir)
     package:lock()
 
     -- get urls
