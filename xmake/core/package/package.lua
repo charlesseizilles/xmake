@@ -760,7 +760,7 @@ function _instance:cachedir()
             -- lock elfutils /home/runner/.xmake/cache/packages/2403/e/elfutils/0.189
             -- package(elfutils) is being accessed by other processes, please wait!
             --
-            local name = self:displayname():lower():gsub("::", "_")
+            local name = self:displayname():lower():gsub("::", "_"):gsub("#", "_")
             local version_str = self:version_str()
             if self:is_thirdparty() then
                 -- strip `>= <=`
